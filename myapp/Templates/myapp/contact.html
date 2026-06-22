@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>{{ title }}</title>
+    <style>
+        body { font-family: Arial; background: #f0f0f0; padding: 40px; }
+        .box { max-width: 500px; margin: auto; background: white;
+               padding: 30px; border-radius: 10px; }
+        input, textarea { width: 100%; padding: 10px; margin: 8px 0;
+                          border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #667eea; color: white; padding: 12px 30px;
+                 border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav style='background: #333; padding: 15px; text-align: center;'>
+        <a href='{% url "home" %}' style='color: white; margin: 0 15px; text-decoration: none;'>Home</a>
+        <a href='{% url "about" %}' style='color: white; margin: 0 15px; text-decoration: none;'>About</a>
+        <a href='{% url "contact" %}' style='color: white; margin: 0 15px; text-decoration: none;'>Contact</a>
+        <a href='{% url "questions" %}' style='color: white; margin: 0 15px; text-decoration: none;'>Questions</a>
+    </nav>
+    <div class='box'>
+        <h1>📧 {{ title }}</h1>
+        <p>Email: {{ email }}</p>
+        <form>
+            <input type='text' placeholder='Your Name'>
+            <input type='email' placeholder='Your Email'>
+            <textarea rows='4' placeholder='Message'></textarea>
+            <button>Send</button>
+        </form>
+    </div>
+</body>
+</html>
+

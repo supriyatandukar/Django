@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>{{ title }}</title>
+    <style>
+        body { font-family: Arial; margin: 0;
+               background: linear-gradient(135deg, #667eea, #764ba2); }
+        .box { max-width: 700px; margin: 50px auto;
+               background: white; border-radius: 15px; padding: 40px; }
+        h1 { color: #667eea; }
+        nav { background: #333; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- <a href='/hello/'>Hello</a> -->
+        <a href='{% url "hello" %}'>Hello</a>
+        <a href='{% url "about" %}'>About</a>
+        <a href='{% url "contact" %}'>Contact</a>
+        <a href='{% url "questions" %}'>Questions</a>
+    </nav>
+    <div class='box'>
+        <h1>ℹ️ {{ title }}</h1>
+        <p>This is a 2-hour Django workshop teaching the basics.</p>
+        <h3>What you learned:</h3>
+        <ul>
+            <li>Django setup</li>
+            <li>Project & app creation</li>
+            <li>Views and URL routing</li>
+            <li>Template rendering</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- Path('myapp/templates/myapp/about.html').write_text(about_html) -->
+<!-- print('✅ about.html created') -->
